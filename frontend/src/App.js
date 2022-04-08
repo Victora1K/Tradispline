@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen';
 import TaskScreen from './screens/TaskScreen';
+import ScalpScreen from './screens/ScalpScreen';
 
 export default function App() {
     return (
@@ -14,9 +15,12 @@ export default function App() {
             <Routes>
             
                 
-                <Route exact path="/" element={<HomeScreen /> } >
+                <Route path="/" element={<HomeScreen /> } >
                 </Route>
-                <Route path="/Task/:_id" element={<TaskScreen />} />
+                <Route path="/tasks" element={<HomeScreen /> } >
+                </Route>
+                <Route path="/tasks/:id" element={<TaskScreen />} />
+                <Route path="/tasks/Scalp" element={<ScalpScreen />} />
                 
             
             </Routes>

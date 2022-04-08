@@ -38,4 +38,4 @@ def getTask(request, pk):
 #            break
 
 
-    return Response(task)
+    #return Response(task)

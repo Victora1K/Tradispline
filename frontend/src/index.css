@@ -1,16 +1,16 @@
-main{
+main {
   min-height: 80vh;
 }
 
-h3{
+h3 {
   padding: 1rem 0;
 }
 
-.rating span{
-  margin:0.1rem;
+.rating span {
+  margin: 0.1rem;
 }
 
-h2{
+h2 {
   color: black;
   text-align: center;
   padding: 12px;
@@ -20,7 +20,7 @@ h2{
   border-radius: 4px;
 }
 
-div{
+div {
   color: rgb(233, 16, 99);
   text-align: center;
   padding: 12px;
@@ -29,8 +29,36 @@ div{
   border-radius: 4px;
 }
 
-h4{
+h4 {
   color: black;
   text-align: bottom;
   padding: 4px;
+}
+
+strong {
+  text-align: middle;
+  padding: 20px;
+}
+
+.brand-link-parent a {
+  text-decoration: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.todo-nav-parent {
+  top: -11px;
+  left: 0;
+  right: 0;
+  position: absolute !important;
+}
+
+.navbar.float{
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  top: 0;
 }
