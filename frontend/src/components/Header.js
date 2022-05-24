@@ -19,7 +19,7 @@ function Header() {
                         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                             <Nav.Link href="/Survey"><i className="fa-solid fa-square-poll-horizontal"></i> SURVEY  </Nav.Link>
 
-                            <Nav.Link href="/Todo"><i className="fa-solid fa-list-check"></i>  TO-DO  </Nav.Link>
+                            <Nav.Link href="plan/:id?"><i className="fa-solid fa-list-check"></i>  PLAN  </Nav.Link>
                             <Nav.Link href="/Login"><i className="fas fa-user"></i> LOGIN </Nav.Link>
 
                             <div style={{ position: 'relative' }}>

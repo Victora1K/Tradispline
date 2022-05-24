@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen';
 import TaskScreen from './screens/TaskScreen';
 import ScalpScreen from './screens/ScalpScreen';
+import PlanScreen from './screens/PlanScreen';
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                 <Route path="/tasks" element={<HomeScreen /> } >
                 </Route>
                 <Route path="/tasks/:id" element={<TaskScreen />} />
+                <Route path="/plan/:id" element={<PlanScreen />} />
                 <Route path="/tasks/Scalp" element={<ScalpScreen />} />
                 
             
