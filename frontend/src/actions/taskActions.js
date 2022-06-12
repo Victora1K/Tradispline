@@ -34,8 +34,8 @@ export const listTasks = () => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: TASK_LIST_FAILURE,
-            payload: error.response && error.response.data.message
-                ? error.response.data.message
+            payload: error.response && error.response.data.detail
+                ? error.response.data.detail
                 : error.message,
         })
 
@@ -57,8 +57,8 @@ export const listTaskDetails = (id) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: TASK_DETAILS_FAILURE,
-            payload: error.response && error.response.data.message
-                ? error.response.data.message
+            payload: error.response && error.response.data.detail
+                ? error.response.data.detail
                 : error.message,
         })
 

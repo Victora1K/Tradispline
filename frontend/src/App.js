@@ -7,6 +7,9 @@ import HomeScreen from './screens/HomeScreen';
 import TaskScreen from './screens/TaskScreen';
 import ScalpScreen from './screens/ScalpScreen';
 import PlanScreen from './screens/PlanScreen';
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 export default function App() {
     return (
@@ -18,6 +21,9 @@ export default function App() {
                 
                 <Route path="/" element={<HomeScreen /> } >
                 </Route>
+                <Route path="/login" element={<LoginScreen />} />
+                <Route path="/register" element={<RegisterScreen />} />
+                <Route path="/profile" element={<ProfileScreen />} />
                 <Route path="/tasks" element={<HomeScreen /> } >
                 </Route>
                 <Route path="/tasks/:id" element={<TaskScreen />} />

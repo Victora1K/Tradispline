@@ -1,9 +1,25 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { Navbar, Nav, Container, Row, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Link } from "react-router-dom";
+import { LoginScreen } from '../screens/LoginScreen'
+import { logout } from '../actions/userAction'
 
 function Header() {
+
+    
+    const userLogin = useSelector(state => state.userLogin)
+    //destructure to get userInfo
+    const {userInfo}= userLogin
+
+    const dispatch = useDispatch()
+
+    //function to handle logout
+    const logoutHandler = () =>{
+        dispatch(logout())
+    }
+    
     return (
         <header>
             <Navbar  bg="dark" variant="dark" expand="lg" collapseOnSelect>
@@ -20,16 +36,27 @@ function Header() {
                             <Nav.Link href="/Survey"><i className="fa-solid fa-square-poll-horizontal"></i> SURVEY  </Nav.Link>
 
                             <Nav.Link href="plan/:id?"><i className="fa-solid fa-list-check"></i>  PLAN  </Nav.Link>
-                            <Nav.Link href="/Login"><i className="fas fa-user"></i> LOGIN </Nav.Link>
+                            
+                            {userInfo ?  (
+                            
+                                <NavDropdown title={userInfo.name} >
+                                    
+                                    <NavDropdown.Item href="profile"> Profile</NavDropdown.Item>
+                    
+                                    <NavDropdown.Item onClick={logoutHandler}> Logout</NavDropdown.Item>
 
-                            <div style={{ position: 'relative' }}>
-                                <NavDropdown className='todo-nav-parent' title="TO-DO"
-                                    menuVariant="dark">
-                                    <NavDropdown.Item href="/tasks/Scalp/">Scalp</NavDropdown.Item>
-                                    <NavDropdown.Item href="Daytrade/">Daytrade</NavDropdown.Item>
-                                    <NavDropdown.Item href="Swing/">Swing</NavDropdown.Item>
                                 </NavDropdown>
-                            </div>
+                            ):(<Nav.Link href="/Login"><i className="fas fa-user"></i> LOGIN </Nav.Link>
+                            )}
+                            
+                           
+                            
+                            
+                            
+
+                            
+
+                      
                         </Nav>
 
                     </Navbar.Collapse>
