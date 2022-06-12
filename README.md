@@ -1,2 +1,0 @@
-# Tradispline
-Tradispline source code
